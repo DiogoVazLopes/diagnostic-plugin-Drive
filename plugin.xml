@@ -29,6 +29,7 @@
         <preference name="LOCATION_ALWAYS_USAGE_DESCRIPTION"/>
         <preference name="LOCATION_WHEN_IN_USE_DESCRIPTION"/>
         <preference name="MOTION_USAGE_DESCRIPTION"/>
+		<preference name="CAMERA_USAGE_DESCRIPTION"/>
 
         <js-module src="www/ios/diagnostic.js" name="Diagnostic">
             <merges target="cordova.plugins.diagnostic" />
@@ -125,7 +126,7 @@
         <framework src="AVFoundation.framework" />
 
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-            <string>This app requires camera access to function properly.</string>
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
